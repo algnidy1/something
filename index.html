@@ -4,421 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>محل الاكسيسوارات</title>
-</head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        margin: 0;
-        padding: 20px;
-
-    }
-    body > .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
-        gap: 10px; /* Space between grid items */
-    } 
-    h1 {
-        text-align: center;
-        color: #333;
-    }
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0 auto;
-        max-width: 1200px;
-        border-radius: 5px;
-        gap: 10px; /* Space between grid items */
-        display: grid;
-        width: 100%;
-       }
-
-    li {
-        background-color: #fff;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
-        text-align: center;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    li:hover {
-        background-color: #f0f0f0;
-    }
-
-    .total-cost {
-        font-weight: bold;
-        color: #d9534f;
-    }
-
-    .price {
-        color: #5bc0de;
-    }
-
-    .quantity {
-        color: #5cb85c;
-    }
-
-    div.total-summary {
-        font-size: 20px; /* حجم النص */
-        font-weight: bold; /* جعل النص عريضًا */
-        color: #4CAF50; /* لون النص */
-        text-align: center; /* محاذاة النص إلى المنتصف */
-        margin-top: 20px; /* إضافة مسافة علوية */
-        padding: 10px; /* إضافة حشوة داخلية */
-        background-color: #f9f9f9; /* لون خلفية */
-        border: 2px solid #4CAF50; /* إطار حول العنصر */
-        border-radius: 5px; /* زوايا مستديرة */
-    }
-</style>
-<body>
-<div class="container">
-   <ul>
-
-        <li>استرتش ثقيل 10سم<div class="price-quantity">السعر: 75 <br/><br/>(الكمية: 15.8)</div><div class="total-cost">المجموع: 1185</div></li>
-        <li>اكرة بلية صيني اسود<div class="price-quantity">السعر: 45 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 450</div></li>
-        <li>اكرة بلية صيني بيج الرياض<div class="price-quantity">السعر: 50 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 500</div></li>
-        <li>اكرة بلية كينج بيج<div class="price-quantity">السعر: 50 <br/>(الكمية: 44)</div><div class="total-cost">المجموع: 2200</div></li>
-        <li>اكرة كالون صيني اسود<div class="price-quantity">السعر: 100 <br/>(الكمية: 5)</div><div class="total-cost">المجموع: 500</div></li>
-        <li>اكرة كالون صيني بيج<div class="price-quantity">السعر: 100 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 1000</div></li>
-        <li>الانكية 2*5مم<div class="price-quantity">السعر: 25 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>الانكية 3مم<div class="price-quantity">السعر: 25 <br/>(الكمية: 5)</div><div class="total-cost">المجموع: 125</div></li>
-        <li>الانكية 4مم<div class="price-quantity">السعر: 25 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>الانكية 5مم<div class="price-quantity">السعر: 30 <br/>(الكمية: 17)</div><div class="total-cost">المجموع: 510</div></li>
-        <li>انبوبة فوم<div class="price-quantity">السعر: 98 <br/>(الكمية: 25)</div><div class="total-cost">المجموع: 2450</div></li>
-        <li>علبه برشام 4*12 اسكروستيل<div class="price-quantity">السعر: 175 <br/>(الكمية: 8)</div><div class="total-cost">المجموع: 1400</div></li>
-        <li>بسكوتة خضراء<div class="price-quantity">السعر: 12 <br/>(الكمية: 90)</div><div class="total-cost">المجموع: 1080</div></li>
-        <li>بصمة اسود<div class="price-quantity">السعر: 0.3 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>بصمة بيج<div class="price-quantity">السعر: 0.3 <br/>(الكمية: 300)</div><div class="total-cost">المجموع: 90</div></li>
-        <li>بلاور توتال 400وات<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>بنسة ببوز<div class="price-quantity">السعر: 200 <br/>(الكمية: 5)</div><div class="total-cost">المجموع: 1000</div></li>
-        <li>بنطة 2*5مم<div class="price-quantity">السعر: 200 <br/>(الكمية: 83)</div><div class="total-cost">المجموع: 16600</div></li>
-        <li>بنطة 2مم<div class="price-quantity">السعر: 5 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>بنطة 3مم<div class="price-quantity">السعر: 6 <br/>(الكمية: 85)</div><div class="total-cost">المجموع: 510</div></li>
-        <li>بنطة 4مم<div class="price-quantity">السعر: 9 <br/>(الكمية: 7)</div><div class="total-cost">المجموع: 63</div></li>
-        <li>بنطة 5مم<div class="price-quantity">السعر: 9 <br/>(الكمية: 27)</div><div class="total-cost">المجموع: 243</div></li>
-        <li>بنطة 6مم<div class="price-quantity">السعر: 10 <br/>(الكمية: 84)</div><div class="total-cost">المجموع: 840</div></li>
-        <li>بنطة تفريز 35مم<div class="price-quantity">السعر: 55 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>بنطة تفريز 55مم<div class="price-quantity">السعر: 60 <br/>(الكمية: 2)</div><div class="total-cost">المجموع: 120</div></li>
-        <li>ترباس PS بلاستيك اسود<div class="price-quantity">السعر: 14 <br/>(الكمية: 80)</div><div class="total-cost">المجموع: 1120</div></li>
-        <li>ترباس PS صيني اسود<div class="price-quantity">السعر: 35 <br/>(الكمية: 23)</div><div class="total-cost">المجموع: 805</div></li>
-        <li>ترباس PS صيني بيج<div class="price-quantity">السعر: 35 <br/>(الكمية: 27)</div><div class="total-cost">المجموع: 945</div></li>
-        <li>ترباس السعد جيما<div class="price-quantity">السعر: 38 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>ترولى 16سم GM<div class="price-quantity">السعر: 575 <br/>(الكمية: 1)</div><div class="total-cost">المجموع: 575</div></li>
-        <li>ترولى 30سم السلاب<div class="price-quantity">السعر: 590 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>ترولى 35سم السلاب<div class="price-quantity">السعر: 600 <br/>(الكمية: 2)</div><div class="total-cost">المجموع: 1200</div></li>
-        <li>ثلاثي 2*5 ابيض SM<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 590)</div><div class="total-cost">المجموع: 1475</div></li>
-        <li>ثلاثي 2*5 اخضر الندي<div class="price-quantity">السعر: 2.7 <br/>(الكمية: 397)</div><div class="total-cost">المجموع: 1071.9</div></li>
-        <li>ثلاثي 2*5 اسود T<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>ثلاثي 2*5 اسود الوادي<div class="price-quantity">السعر: 2.7 <br/>(الكمية: 588)</div><div class="total-cost">المجموع: 1587.6</div></li>
-        <li>ثلاثي 2*5 اسود SM<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 700)</div><div class="total-cost">المجموع: 1750</div></li>
-        <li>ثلاثي 2*5 اصفر الندي<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 242)</div><div class="total-cost">المجموع: 605</div></li>
-        <li>ثلاثي 2*5 باذنجاني خلف<div class="price-quantity">السعر: 2.7 <br/>(الكمية: 120)</div><div class="total-cost">المجموع: 324</div></li>
-        <li>ثلاثي 2*5 بني SM<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 257)</div><div class="total-cost">المجموع: 642.5</div></li>
-        <li>ثلاثي 2*5 بيج SM<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 1663)</div><div class="total-cost">المجموع: 4157.5</div></li>
-        <li>ثلاثي 2*5 بيج الوادي<div class="price-quantity">السعر: 2.7 <br/>(الكمية: 931)</div><div class="total-cost">المجموع: 2513.7</div></li>
-        <li>ثلاثي 2*5 بيج خلف<div class="price-quantity">السعر: 2.7 <br/>(الكمية: 468)</div><div class="total-cost">المجموع: 1263.6</div></li>
-        <li>ثلاثي 2*5 تركواز خلف<div class="price-quantity">السعر: 2.7 <br/>(الكمية: 400)</div><div class="total-cost">المجموع: 1080</div></li>
-        <li>ثلاثي 2*5 رصاصي SM<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 570)</div><div class="total-cost">المجموع: 1425</div></li>
-        <li>ثلاثي 2*5 رصاصي غامق خلف<div class="price-quantity">السعر: 2.7 <br/>(الكمية: 428)</div><div class="total-cost">المجموع: 1155.6</div></li>
-        <li>ثلاثي 2*5 روز<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 447)</div><div class="total-cost">المجموع: 1117.5</div></li>
-        <li>ثلاثي 2*5 فوشيا SM<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 500)</div><div class="total-cost">المجموع: 1250</div></li>
-        <li>ثلاثي 2*5 كافي SM<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 912)</div><div class="total-cost">المجموع: 2280</div></li>
-        <li>ثلاثي 2*5 كافي الوادي<div class="price-quantity">السعر: 2.7 <br/>(الكمية: 227)</div><div class="total-cost">المجموع: 612.9</div></li>
-        <li>جوز كابولي ماسورة<div class="price-quantity">السعر: 58 <br/>(الكمية: 67)</div><div class="total-cost">المجموع: 3886</div></li>
-        <li>حامل كاسات 2فرع صيني<div class="price-quantity">السعر: 95 <br/>(الكمية: 27)</div><div class="total-cost">المجموع: 2565</div></li>
-        <li>حامل كاسات 3فرع صيني<div class="price-quantity">السعر: 105 <br/>(الكمية: 6)</div><div class="total-cost">المجموع: 630</div></li>
-        <li>حامل مقشات مستورد<div class="price-quantity">السعر: 150 <br/>(الكمية: 4)</div><div class="total-cost">المجموع: 600</div></li>
-        <li>حامل رف ستالس<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>حرف S بلاستيك بيور<div class="price-quantity">السعر: 5 <br/>(الكمية: 53)</div><div class="total-cost">المجموع: 265</div></li>
-        <li>حرف S مفرد استانلس<div class="price-quantity">السعر: 8 <br/>(الكمية: 306)</div><div class="total-cost">المجموع: 2448</div></li>
-        <li>دبل بجناح SM<div class="price-quantity">السعر: 0.85 <br/>(الكمية: 9440)</div><div class="total-cost">المجموع: 8024</div></li>
-        <li>دبل بجناح الوادي<div class="price-quantity">السعر: 0.85 <br/>(الكمية: 2750)</div><div class="total-cost">المجموع: 2337.5</div></li>
-        <li>دبل بجناح خلف<div class="price-quantity">السعر: 0.85 <br/>(الكمية: 423)</div><div class="total-cost">المجموع: 359.55</div></li>
-        <li>دبل كبير الجوكر<div class="price-quantity">السعر: 1.25 <br/>(الكمية: 776)</div><div class="total-cost">المجموع: 970</div></li>
-        <li>دفن 2*5 SM مصمت<div class="price-quantity">السعر: 1 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>دفن 2*5 مصمت المصطفي<div class="price-quantity">السعر: 0.85 <br/>(الكمية: 692)</div><div class="total-cost">المجموع: 588.2</div></li>
-        <li>دفن 2*5 sm منفرجة<div class="price-quantity">السعر: 1 <br/>(الكمية: 128)</div><div class="total-cost">المجموع: 128</div></li>
-        <li>دليل سكينة تانجو<div class="price-quantity">السعر: 8 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>دليل سكينة صغير اسود<div class="price-quantity">السعر: 5 <br/>(الكمية: 391)</div><div class="total-cost">المجموع: 1955</div></li>
-        <li>دليل سكينة كبير اسود<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>دليل علوي جامبو<div class="price-quantity">السعر: 5 <br/>(الكمية: 29)</div><div class="total-cost">المجموع: 145</div></li>
-        <li>دوقماق بلاستيك<div class="price-quantity">السعر: 135 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>ذراع باكم 100<div class="price-quantity">السعر: 18 <br/>(الكمية: 28)</div><div class="total-cost">المجموع: 504</div></li>
-        <li>ذراع باكم 120<div class="price-quantity">السعر: 18 <br/>(الكمية: 50)</div><div class="total-cost">المجموع: 900</div></li>
-        <li>ذراع باكم 80<div class="price-quantity">السعر: 18 <br/>(الكمية: 217)</div><div class="total-cost">المجموع: 3906</div></li>
-        <li>ذراع باكم 80 سوفت<div class="price-quantity">السعر: 55 <br/>(الكمية: 17)</div><div class="total-cost">المجموع: 935</div></li>
-        <li>ذراع ترابيذة 35سم<div class="price-quantity">السعر: 150 <br/>(الكمية: 9)</div><div class="total-cost">المجموع: 1350</div></li>
-
-
-
-<li>ذراع قلاب 1مرحلة PS صيني<div class="price-quantity">السعر: 50 <br/>(الكمية: 56)</div><div class="total-cost">المجموع: 2800</div></li>
-<li>ذراع قلاب 2مرحلة PS صيني<div class="price-quantity">السعر: 50 <br/>(الكمية: 35)</div><div class="total-cost">المجموع: 1750</div></li>
-<li>ذراع قلاب السعد 1مرحلة تايواني<div class="price-quantity">السعر: 75 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>ذراع قلاب السعد 2مرحلة تايواني<div class="price-quantity">السعر: 75 <br/>(الكمية: 43)</div><div class="total-cost">المجموع: 3225</div></li>
-<li>رباعي 4*4 دوران اسود<div class="price-quantity">السعر: 6 <br/>(الكمية: 22)</div><div class="total-cost">المجموع: 132</div></li>
-<li>رجل الكاس 10سم مستورد معدن<div class="price-quantity">السعر: 14 <br/>(الكمية: 164)</div><div class="total-cost">المجموع: 2296</div></li>
-<li>رجل الكاس 8سم مستورد<div class="price-quantity">السعر: 13 <br/>(الكمية: 73)</div><div class="total-cost">المجموع: 949</div></li>
-<li>رجل الكاس بلاستيك 10سم<div class="price-quantity">السعر: 5 <br/>(الكمية: 362)</div><div class="total-cost">المجموع: 1810</div></li>
-<li>رجل بلاستيك <br/>(سوكلو)<div class="price-quantity">السعر: 7 <br/>(الكمية: 47)</div><div class="total-cost">المجموع: 329</div></li>
-<li>رجل موزة مستوردة<div class="price-quantity">السعر: 28 <br/>(الكمية: 84)</div><div class="total-cost">المجموع: 2352</div></li>
-<li>رينو السعد ستار<div class="price-quantity">السعر: 7.5 <br/>(الكمية: 82)</div><div class="total-cost">المجموع: 615</div></li>
-<li>رينو جامبو GM<div class="price-quantity">السعر: 7.5 <br/>(الكمية: 645)</div><div class="total-cost">المجموع: 4837.5</div></li>
-<li>رينو جرار صغير جولد<div class="price-quantity">السعر: 6 <br/>(الكمية: 1553.982)</div><div class="total-cost">المجموع: 9323.88</div></li>
-<li>رينو مفصلي جولد<div class="price-quantity">السعر: 7 <br/>(الكمية: 304)</div><div class="total-cost">المجموع: 2128</div></li>
-<li>زاوية قياس توتال<div class="price-quantity">السعر: 265 <br/>(الكمية: 4)</div><div class="total-cost">المجموع: 1060</div></li>
-<li>زاوية تجميع بلاستيك<div class="price-quantity">السعر: 5 <br/>(الكمية: 36)</div><div class="total-cost">المجموع: 180</div></li>
-<li>زاوية صاج 7مم<div class="price-quantity">السعر: 0.3 <br/>(الكمية: 2757)</div><div class="total-cost">المجموع: 827.1</div></li>
-<li>زاوية صاج تانجو<div class="price-quantity">السعر: 0.6 <br/>(الكمية: 58.99)</div><div class="total-cost">المجموع: 35.394</div></li>
-<li>زاوية صاج جامبو<div class="price-quantity">السعر: 1 <br/>(الكمية: 269)</div><div class="total-cost">المجموع: 269</div></li>
-<li>زاوية صاج درفة محملة<div class="price-quantity">السعر: 0.75 <br/>(الكمية: 1613)</div><div class="total-cost">المجموع: 1209.75</div></li>
-        <li>زلاقة بيور<div class="price-quantity">السعر: 5 <br/>(الكمية: 90)</div><div class="total-cost">المجموع: 450</div></li>
-        <li>زور كالون طويل<div class="price-quantity">السعر: 45 <br/>(الكمية: 7)</div><div class="total-cost">المجموع: 315</div></li>
-        <li>زور كالون قصير<div class="price-quantity">السعر: 35 <br/>(الكمية: 5)</div><div class="total-cost">المجموع: 175</div></li>
-        <li>سبت بلاستيك ابيض<div class="price-quantity">السعر: 55 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>سبت بلاستيك اسود<div class="price-quantity">السعر: 55 <br/>(الكمية: 27)</div><div class="total-cost">المجموع: 1485</div></li>
-        <li>سبت بلاستيك بني<div class="price-quantity">السعر: 55 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-        <li>سبت بلاستيك بيج<div class="price-quantity">السعر: 55 <br/>(الكمية: 72)</div><div class="total-cost">المجموع: 3960</div></li>
-        <li>سبت بلاستيك رصاصي<div class="price-quantity">السعر: 55 <br/>(الكمية: 58)</div><div class="total-cost">المجموع: 3190</div></li>
-        <li>سبت بلاستيك كافي<div class="price-quantity">السعر: 55 <br/>(الكمية: 77)</div><div class="total-cost">المجموع: 4235</div></li>
-        <li>سبت بلاستيك موف<div class="price-quantity">السعر: 50 <br/>(الكمية: 21)</div><div class="total-cost">المجموع: 1050</div></li>
-        <li>سبت بلاستيك روز<div class="price-quantity">السعر: 50 <br/>(الكمية: 3)</div><div class="total-cost">المجموع: 150</div></li>
-        <li>سبليونة 420 كينج اسود<div class="price-quantity">السعر: 105 <br/>(الكمية: 15)</div><div class="total-cost">المجموع: 1575</div></li>
-        <li>سبليونة 420 كينج بيج<div class="price-quantity">السعر: 50 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-
-
-       <li>سبليونة 440 كينج اسود<div class="price-quantity">السعر: 105 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>سبليونة DCL محلي بيج<div class="price-quantity">السعر: 95 <br/>(الكمية: 37)</div><div class="total-cost">المجموع: 3515</div></li>
-<li>سبليونة جرار DCL صيني بيج<div class="price-quantity">السعر: 140 <br/>(الكمية: 14)</div><div class="total-cost">المجموع: 1960</div></li>
-<li>سبليونة جرار DCL كينج اسود<div class="price-quantity">السعر: 170 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 1700</div></li>
-<li>سكاك 1 وش كينج ابيض<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>سكاك 1 وش كينج اسود<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>سكاك 1وش صيني اسود<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>سكاك 2وش صيني اسود<div class="price-quantity">السعر: 70 <br/>(الكمية: 13)</div><div class="total-cost">المجموع: 910</div></li>
-<li>سكاك 2وش صيني بيج<div class="price-quantity">السعر: 70 <br/>(الكمية: 15)</div><div class="total-cost">المجموع: 1050</div></li>
-<li>سكاك سوستة رشيد بيج<div class="price-quantity">السعر: 50 <br/>(الكمية: 78)</div><div class="total-cost">المجموع: 3900</div></li>
-<li>سكاك سوستة مينا بيج<div class="price-quantity">السعر: 45 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>سكاك سوستة نوبيا اسود<div class="price-quantity">السعر: 45 <br/>(الكمية: 50)</div><div class="total-cost">المجموع: 2250</div></li>
-<li>سكاك سوستة نوبيا بيج<div class="price-quantity">السعر: 45 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>سلاح كاتر علبة<div class="price-quantity">السعر: 20 <br/>(الكمية: 9)</div><div class="total-cost">المجموع: 180</div></li>
-<li>سلة 40سم GM<div class="price-quantity">السعر: 575 <br/>(الكمية: 1)</div><div class="total-cost">المجموع: 575</div></li>
-<li>سليكون ابيض<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>سليكون شفاف<div class="price-quantity">السعر: 50 <br/>(الكمية: 17)</div><div class="total-cost">المجموع: 850</div></li>
-<li>سليكون عضم<div class="price-quantity">السعر: 100 <br/>(الكمية: 8)</div><div class="total-cost">المجموع: 800</div></li>
-<li>شاكوش بكماشه صغير<div class="price-quantity">السعر: 120 <br/>(الكمية: 1)</div><div class="total-cost">المجموع: 120</div></li>
-<li>شاكوش بكماشه كبير<div class="price-quantity">السعر: 140 <br/>(الكمية: 1)</div><div class="total-cost">المجموع: 140</div></li>
-<li>شاكوش وزن 200جرام<div class="price-quantity">السعر: 130 <br/>(الكمية: 7)</div><div class="total-cost">المجموع: 910</div></li>
-<li>شنيور 400وات<div class="price-quantity">السعر: 920 <br/>(الكمية: 3)</div><div class="total-cost">المجموع: 2760</div></li>
-<li>شنيور 900وات<div class="price-quantity">السعر: 0 <br/>(الكمية: 1)</div><div class="total-cost">المجموع: 0</div></li>
-<li>صاروخ توناك 1100وات<div class="price-quantity">السعر: 1990 <br/>(الكمية: 1)</div><div class="total-cost">المجموع: 1990</div></li>
-<li>صينية منشار توناك 1400وات<div class="price-quantity">السعر: 2349 <br/>(الكمية: 1)</div><div class="total-cost">المجموع: 2349</div></li>
-
-<li>صفاية 60سم السلاب<div class="price-quantity">السعر: 280 <br/>(الكمية: 9)</div><div class="total-cost">المجموع: 2520</div></li>
-<li>صفاية 70سم السلاب<div class="price-quantity">السعر: 330 <br/>(الكمية: 12)</div><div class="total-cost">المجموع: 3960</div></li>
-<li>صفاية 80سم السلاب<div class="price-quantity">السعر: 340 <br/>(الكمية: 3)</div><div class="total-cost">المجموع: 1020</div></li>
-<li>طبة 4*4 دوران<div class="price-quantity">السعر: 1 <br/>(الكمية: 605)</div><div class="total-cost">المجموع: 605</div></li>
-<li>طبة 4*4 عدلة<div class="price-quantity">السعر: 4.5 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>طبة 8*8<div class="price-quantity">السعر: 3 <br/>(الكمية: 182)</div><div class="total-cost">المجموع: 546</div></li>
-<li>طبة T مرد اسود<div class="price-quantity">السعر: 5 <br/>(الكمية: 148)</div><div class="total-cost">المجموع: 740</div></li>
-<li>طبة T مرد بيج<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>طبة بلت ان ابيض الندي<div class="price-quantity">السعر: 2.25 <br/>(الكمية: 200)</div><div class="total-cost">المجموع: 450</div></li>
-<li>طبة بلت ان اسود الندي<div class="price-quantity">السعر: 2.25 <br/>(الكمية: 1350)</div><div class="total-cost">المجموع: 3037.5</div></li>
-<li>طبة بلت ان بيج الندي<div class="price-quantity">السعر: 2.25 <br/>(الكمية: 950)</div><div class="total-cost">المجموع: 2137.5</div></li>
-<li>طبة مقبض بلت ان رصاصي صغيرة<div class="price-quantity">السعر: 1.75 <br/>(الكمية: 450)</div><div class="total-cost">المجموع: 787.5</div></li>
-<li>طبة مقبض بلت ان كافي صغيرة<div class="price-quantity">السعر: 1.75 <br/>(الكمية: 380)</div><div class="total-cost">المجموع: 665</div></li>
-<li>طقم تجميع 2*10 خارجي<div class="price-quantity">السعر: 6.5 <br/>(الكمية: 94)</div><div class="total-cost">المجموع: 611</div></li>
-<li>طقم تجميع 2*8 خارجي<div class="price-quantity">السعر: 6 <br/>(الكمية: 37)</div><div class="total-cost">المجموع: 222</div></li>
-<li>طقم تجميع دفن 2*10<div class="price-quantity">السعر: 6 <br/>(الكمية: 80)</div><div class="total-cost">المجموع: 480</div></li>
-<li>طقم تجميع دفن 2*8<div class="price-quantity">السعر: 5 <br/>(الكمية: 69)</div><div class="total-cost">المجموع: 345</div></li>
-<li>طقم عجل 2بوصة احمر فرامل<div class="price-quantity">السعر: 50 <br/>(الكمية: 26)</div><div class="total-cost">المجموع: 1300</div></li>
-<li>عجل PS دبل محمل<div class="price-quantity">السعر: 120 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>عجل P.V.C مزدوج<div class="price-quantity">السعر: 0 <br/>(الكمية: 91)</div><div class="total-cost">المجموع: 0</div></li>
-<li>عجل تانجو مفرد طقم<div class="price-quantity">السعر: 75 <br/>(الكمية: 48)</div><div class="total-cost">المجموع: 3600</div></li>
-<li>عجل سلك جامبو<div class="price-quantity">السعر: 80 <br/>(الكمية: 169)</div><div class="total-cost">المجموع: 13520</div></li>
-<li>عجل سلك مستورد<div class="price-quantity">السعر: 8.5 <br/>(الكمية: 137)</div><div class="total-cost">المجموع: 1164.5</div></li>
-<li>عجل ماك طقم<div class="price-quantity">السعر: 27 <br/>(الكمية: 96)</div><div class="total-cost">المجموع: 2592</div></li>
-</ul>
-<ul>        
-<li>عجل PS محمل<div class="price-quantity">السعر: 55 <br/>(الكمية: 24)</div><div class="total-cost">المجموع: 1320</div></li>
-<li>عجل PS الخربوطلي<div class="price-quantity">السعر: 120 <br/>(الكمية: 30)</div><div class="total-cost">المجموع: 3600</div></li>
-<li>عجل PS محلي<div class="price-quantity">السعر: 35 <br/>(الكمية: 16)</div><div class="total-cost">المجموع: 560</div></li>
-
-
-
-<li>عصفورة PS صيني اسود<div class="price-quantity">السعر: 35 <br/>(الكمية: 39)</div><div class="total-cost">المجموع: 1365</div></li>
-<li>عصفورة PS صيني بيج<div class="price-quantity">السعر: 35 <br/>(الكمية: 24)</div><div class="total-cost">المجموع: 840</div></li>
-<li>عصفورة السعد اسود<div class="price-quantity">السعر: 17 <br/>(الكمية: 25)</div><div class="total-cost">المجموع: 425</div></li>
-<li>عضم 4سم الشيخ<div class="price-quantity">السعر: 0.75 <br/>(الكمية: 1432)</div><div class="total-cost">المجموع: 1074</div></li>
-<li>عضم صداد 2قطع<div class="price-quantity">السعر: 4.5 <br/>(الكمية: 155)</div><div class="total-cost">المجموع: 697.5</div></li>
-<li>عضم جرار ابيض<div class="price-quantity">السعر: 1.75 <br/>(الكمية: 826)</div><div class="total-cost">المجموع: 1445.5</div></li>
-<li>عضم سلك السعد ابيض<div class="price-quantity">السعر: 0.75 <br/>(الكمية: 509)</div><div class="total-cost">المجموع: 381.75</div></li>
-<li>عضم سلك ثابت جامبو<div class="price-quantity">السعر: 0.5 <br/>(الكمية: 1038)</div><div class="total-cost">المجموع: 519</div></li>
-<li>عضم شبح<div class="price-quantity">السعر: 1 <br/>(الكمية: 1349)</div><div class="total-cost">المجموع: 1349</div></li>
-<li>عضم عراقي<div class="price-quantity">السعر: 1 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>عضم كلاسيك<div class="price-quantity">السعر: 1 <br/>(الكمية: 331)</div><div class="total-cost">المجموع: 331</div></li>
-<li>علاقة مطبخ معدني<div class="price-quantity">السعر: 5 <br/>(الكمية: 24)</div><div class="total-cost">المجموع: 120</div></li>
-<li>غالق ابواب باكم<div class="price-quantity">السعر: 480 <br/>(الكمية: 4)</div><div class="total-cost">المجموع: 1920</div></li>
-<li>فراشة 2درفة تركي<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>فراشة 2درفة صيني اسود<div class="price-quantity">السعر: 85 <br/>(الكمية: 12)</div><div class="total-cost">المجموع: 1020</div></li>
-<li>فراشة 2درفة صيني بيج<div class="price-quantity">السعر: 85 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 850</div></li>
-<li>فراشة 4درفة صيني اسود<div class="price-quantity">السعر: 130 <br/>(الكمية: 3)</div><div class="total-cost">المجموع: 390</div></li>
-<li>فرش 5*5<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>فرش 7*7 م50<div class="price-quantity">السعر: 100 <br/>(الكمية: 12)</div><div class="total-cost">المجموع: 1200</div></li>
-<li>فرش 7*7 م375 أرال لفة<div class="price-quantity">السعر: 675 <br/>(الكمية: 3)</div><div class="total-cost">المجموع: 2025</div></li>
-<li>فرش 7*7 مسلح كينج لفة<div class="price-quantity">السعر: 295 <br/>(الكمية: 4)</div><div class="total-cost">المجموع: 1180</div></li>
-<li>فوم مسدس<div class="price-quantity">السعر: 97 <br/>(الكمية: 21)</div><div class="total-cost">المجموع: 2037</div></li>
-<li>فيشر 6مم تايواني<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>فيشر 6مم مستورد<div class="price-quantity">السعر: 42 <br/>(الكمية: 32)</div><div class="total-cost">المجموع: 1344</div></li>
-<li>قاطع زجاج<div class="price-quantity">السعر: 150 <br/>(الكمية: 2)</div><div class="total-cost">المجموع: 300</div></li>
-
-
-<li>ك مسمار الشرق 3/4 *10<div class="price-quantity">السعر: 95 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>ك مسمار الشرق مقاسات<div class="price-quantity">السعر: 95 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>كالون اشارة تركي 30مم ابيض<div class="price-quantity">السعر: 390 <br/>(الكمية: 3)</div><div class="total-cost">المجموع: 1170</div></li>
-<li>كالون اشارة تركي بيج 30مم<div class="price-quantity">السعر: 390 <br/>(الكمية: 2)</div><div class="total-cost">المجموع: 780</div></li>
-<li>كالون سواس اھرام<div class="price-quantity">السعر: 285 <br/>(الكمية: 4)</div><div class="total-cost">المجموع: 1140</div></li>
-<li>كالون سواس عصفورة اھرام<div class="price-quantity">السعر: 310 <br/>(الكمية: 6)</div><div class="total-cost">المجموع: 1860</div></li>
-<li>كالون فندقى ثقيل<div class="price-quantity">السعر: 310 <br/>(الكمية: 4)</div><div class="total-cost">المجموع: 1240</div></li>
-<li>كاوتش 1مم ارمو<div class="price-quantity">السعر: 85 <br/>(الكمية: 7)</div><div class="total-cost">المجموع: 595</div></li>
-<li>كاوتش 2مم ارمو<div class="price-quantity">السعر: 85 <br/>(الكمية: 5)</div><div class="total-cost">المجموع: 425</div></li>
-<li>كاوتش MR خط3<div class="price-quantity">السعر: 65 <br/>(الكمية: 4.65)</div><div class="total-cost">المجموع: 302.25</div></li>
-<li>كاوتش 3مم ارمو<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>كاوتش الشريف<div class="price-quantity">السعر: 50 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 500</div></li>
-<li>كاوتش مستورد MR<div class="price-quantity">السعر: 65 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 650</div></li>
-<li>كاوتش منفاخ MR<div class="price-quantity">السعر: 65 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 650</div></li>
-<li>كاوتش10مم الشريف<div class="price-quantity">السعر: 85 <br/>(الكمية: 30)</div><div class="total-cost">المجموع: 2550</div></li>
-<li>كاوتش1مم الشريف<div class="price-quantity">السعر: 85 <br/>(الكمية: 13)</div><div class="total-cost">المجموع: 1105</div></li>
-<li>كاوتش2مم الشريف<div class="price-quantity">السعر: 85 <br/>(الكمية: 25)</div><div class="total-cost">المجموع: 2125</div></li>
-<li>كاوتش3مم الشريف<div class="price-quantity">السعر: 85 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 850</div></li>
-<li>كاوتش4مم الشريف<div class="price-quantity">السعر: 85 <br/>(الكمية: 9)</div><div class="total-cost">المجموع: 765</div></li>
-<li>كاوتش5مم الشريف<div class="price-quantity">السعر: 85 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 850</div></li>
-<li>كاوتش6مم الشريف<div class="price-quantity">السعر: 85 <br/>(الكمية: 9.989)</div><div class="total-cost">المجموع: 849.15</div></li>
-<li>كاوتش7مم الشريف<div class="price-quantity">السعر: 85 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 850</div></li>
-<li>كاوتش8مم الشريف<div class="price-quantity">السعر: 85 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 850</div></li>
-<li>كلبس بار<div class="price-quantity">السعر: 22 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 220</div></li>
-<li>كورنر سلك جامبو بلاستيك<div class="price-quantity">السعر: 22 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 220</div></li>
-<li>كورنر سلك تانجو<div class="price-quantity">السعر: 22 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 220</div></li>
-<li>لفة سلك 1م صلب مصر الكبري<div class="price-quantity">السعر: 26 <br/>(الكمية: 56.8)</div><div class="total-cost">المجموع: 1476.8</div></li>
-<li>لفة سلك صلب 120سم مصر الكبري<div class="price-quantity">السعر: 41 <br/>(الكمية: 35)</div><div class="total-cost">المجموع: 1435</div></li>
-<li>لقمة رباط 7سم تايواني<div class="price-quantity">السعر: 25 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 250</div></li>
-<li>ماسورة استانلس 3م<div class="price-quantity">السعر: 105 <br/>(الكمية: 9.5)</div><div class="total-cost">المجموع: 997.5</div></li>
-<li>مانع اهتزاز بلاستيك<div class="price-quantity">السعر: 32 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 320</div></li>
-<li>متر قياس 5م APT<div class="price-quantity">السعر: 110 <br/>(الكمية: 2)</div><div class="total-cost">المجموع: 220</div></li>
-<li>مجرة 30سم صيني اسود<div class="price-quantity">السعر: 70 <br/>(الكمية: 18)</div><div class="total-cost">المجموع: 1260</div></li>
-<li>مجرة 30سم فضي صيني<div class="price-quantity">السعر: 70 <br/>(الكمية: 45)</div><div class="total-cost">المجموع: 3150</div></li>
-<li>مجرة 35سم صيني اسود<div class="price-quantity">السعر: 70 <br/>(الكمية: 13)</div><div class="total-cost">المجموع: 910</div></li>
-<li>مجرة 40سم سوفت كلوز<div class="price-quantity">السعر: 160 <br/>(الكمية: 4)</div><div class="total-cost">المجموع: 640</div></li>
-<li>مجرة 40سم صيني اسود<div class="price-quantity">السعر: 70 <br/>(الكمية: 11)</div><div class="total-cost">المجموع: 770</div></li>
-<li>مجرة 45 سم صيني اسود<div class="price-quantity">السعر: 78 <br/>(الكمية: 40)</div><div class="total-cost">المجموع: 3120</div></li>
-<li>مجرة 45سم سوفت كلوز<div class="price-quantity">السعر: 170 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مجرة 50سم سوفت كلوز<div class="price-quantity">السعر: 180 <br/>(الكمية: 4)</div><div class="total-cost">المجموع: 720</div></li>
-<li>مجرة 50سم صيني اسود<div class="price-quantity">السعر: 90 <br/>(الكمية: 6)</div><div class="total-cost">المجموع: 540</div></li>
-<li>مجرة 55سم صيني اسود<div class="price-quantity">السعر: 95 <br/>(الكمية: 5)</div><div class="total-cost">المجموع: 475</div></li>
-<li>مجرة 55سم فضي صيني<div class="price-quantity">السعر: 95 <br/>(الكمية: 5)</div><div class="total-cost">المجموع: 475</div></li>
-<li>مجرة 60سم فضي صيني<div class="price-quantity">السعر: 115 <br/>(الكمية: 6)</div><div class="total-cost">المجموع: 690</div></li>
-<li>مجموعة اغلاق جنب بلاستيك<div class="price-quantity">السعر: 5 <br/>(الكمية: 124)</div><div class="total-cost">المجموع: 620</div></li>
-
-<li>مجموعة اغلاق معدن<div class="price-quantity">السعر: 25 <br/>(الكمية: 68)</div><div class="total-cost">المجموع: 1700</div></li>
-<li>مجموعة مفكات مقاسات<div class="price-quantity">السعر: 305 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مسدس سليكون<div class="price-quantity">السعر: 140 <br/>(الكمية: 1)</div><div class="total-cost">المجموع: 140</div></li>
-<li>مسمار الشرق 1.5*10<div class="price-quantity">السعر: 100 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مسمار الشرق 2*10<div class="price-quantity">السعر: 100 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مسمار الشرق 3*10<div class="price-quantity">السعر: 100 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مسمار الشرق 3/4*10<div class="price-quantity">السعر: 100 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مسمار صيني 1.5*10 2ك<div class="price-quantity">السعر: 220 <br/>(الكمية: 6)</div><div class="total-cost">المجموع: 1320</div></li>
-<li>مسمار النجار اسود 1/2*6<div class="price-quantity">السعر: 130 <br/>(الكمية: 4)</div><div class="total-cost">المجموع: 520</div></li>
-<li>مسمار صيني اسود 1/2*6<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مسمار اسكروستيل فضي 1/2*6<div class="price-quantity">السعر: 130 <br/>(الكمية: 23)</div><div class="total-cost">المجموع: 2990</div></li>
-<li>مسمار تايواني فضي 1/2*6<div class="price-quantity">السعر: 170 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مسمار نوفال فضي 1/2*6<div class="price-quantity">السعر: 0 <br/>(الكمية: 9)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مسمار البدر اسود 1/2*8<div class="price-quantity">السعر: 170 <br/>(الكمية: 3)</div><div class="total-cost">المجموع: 510</div></li>
-<li>مسمار صيني اسود 1/2*8<div class="price-quantity">السعر: 0 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مسمار 4.2*55مم وزن 2ك<div class="price-quantity">السعر: 230 <br/>(الكمية: 2)</div><div class="total-cost">المجموع: 460</div></li>
-<li>مسمار 3*10 وزن 1.8ك<div class="price-quantity">السعر: 140 <br/>(الكمية: 13)</div><div class="total-cost">المجموع: 1820</div></li>
-<li>مسمار تك 3سم مخوش<div class="price-quantity">السعر: 120 <br/>(الكمية: 3.5)</div><div class="total-cost">المجموع: 420</div></li>
-<li>مسمار تك 4سم مخوش<div class="price-quantity">السعر: 120 <br/>(الكمية: 2)</div><div class="total-cost">المجموع: 240</div></li>
-<li>مسمار تك 5سم مخوش<div class="price-quantity">السعر: 120 <br/>(الكمية: 4)</div><div class="total-cost">المجموع: 480</div></li>
-<li>مسمار سن صاج 3.5سم صيني *30<div class="price-quantity">السعر: 100 <br/>(الكمية: 23)</div><div class="total-cost">المجموع: 2300</div></li>
-<li>مسمار سن صاج 4.5سم صيني<div class="price-quantity">السعر: 130 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مسمار سن صاج 5سم صيني<div class="price-quantity">السعر: 130 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مفصلة 26مم طويلة صيني<div class="price-quantity">السعر: 10 <br/>(الكمية: 118)</div><div class="total-cost">المجموع: 1180</div></li>
-<li>مطرقة حديد 1.25وزن<div class="price-quantity">السعر: 280 <br/>(الكمية: 1)</div><div class="total-cost">المجموع: 280</div></li>
-<li>مطرقة بلاستيك<div class="price-quantity">السعر: 135 <br/>(الكمية: 7)</div><div class="total-cost">المجموع: 945</div></li>
-<li>مفصلة 35مم استانلس ماكس<div class="price-quantity">السعر: 10 <br/>(الكمية: 252)</div><div class="total-cost">المجموع: 2520</div></li>
-<li>مفصلة 35مم الرياض 4خرم<div class="price-quantity">السعر: 13 <br/>(الكمية: 296)</div><div class="total-cost">المجموع: 3848</div></li>
-<li>مفصلة 35مم ايطالى<div class="price-quantity">السعر: 17.5 <br/>(الكمية: 673)</div><div class="total-cost">المجموع: 11777.5</div></li>
-<li>مفصلة 35مم بلوم<div class="price-quantity">السعر: 10 <br/>(الكمية: 36)</div><div class="total-cost">المجموع: 360</div></li>
-<li>مفصلة PS عوف اسود<div class="price-quantity">السعر: 28 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مفصلة PS عوف بيج<div class="price-quantity">السعر: 28 <br/>(الكمية: 122)</div><div class="total-cost">المجموع: 3416</div></li>
-<li>مفصلة باكم شورت استانلس الرياض<div class="price-quantity">السعر: 21 <br/>(الكمية: 356)</div><div class="total-cost">المجموع: 7476</div></li>
-<li>مفصلة باكم شورت استانلس المظلوم<div class="price-quantity">السعر: 20 <br/>(الكمية: 90)</div><div class="total-cost">المجموع: 1800</div></li>
-<li>مفصلة لطش سعد<div class="price-quantity">السعر: 25 <br/>(الكمية: 85)</div><div class="total-cost">المجموع: 2125</div></li>
-<li>مفك صيني<div class="price-quantity">السعر: 40 <br/>(الكمية: 13)</div><div class="total-cost">المجموع: 520</div></li>
-<li>مقبض H <br/>(128) بني<div class="price-quantity">السعر: 32 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مقبض H <br/>(160)<div class="price-quantity">السعر: 25 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مقبض خرطوم 192<div class="price-quantity">السعر: 26 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مقبض دانا<div class="price-quantity">السعر: 38 <br/>(الكمية: 71)</div><div class="total-cost">المجموع: 2698</div></li>
-<li>مقبض درفة مسطرة معدني<div class="price-quantity">السعر: 60 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 600</div></li>
-<li>مقبض دولفين 128<div class="price-quantity">السعر: 12 <br/>(الكمية: 100)</div><div class="total-cost">المجموع: 1200</div></li>
-<li>مقبض دولفين 160<div class="price-quantity">السعر: 15 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مقبض سلك بلاستيك اسود<div class="price-quantity">السعر: 8 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مقبض سلك بلاستيك بيج<div class="price-quantity">السعر: 8 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مقبض السعد اسود<div class="price-quantity">السعر: 5 <br/>(الكمية: 12)</div><div class="total-cost">المجموع: 60</div></li>
-<li>مقبض شباك<div class="price-quantity">السعر: 60 <br/>(الكمية: 24)</div><div class="total-cost">المجموع: 1440</div></li>
-<li>مقبض زرار معدني<div class="price-quantity">السعر: 6.5 <br/>(الكمية: 170)</div><div class="total-cost">المجموع: 1105</div></li>
-<li>مقبض ماسورة 128 استانلس اسود<div class="price-quantity">السعر: 10 <br/>(الكمية: 101)</div><div class="total-cost">المجموع: 1010</div></li>
-<li>مقبض ماسورة 128 فضي ثقيل<div class="price-quantity">السعر: 25 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مقبض ماسورة 160 استانلس اسود<div class="price-quantity">السعر: 12 <br/>(الكمية: 394)</div><div class="total-cost">المجموع: 4728</div></li>
-<li>مقبض ماسورة 160 لميع<div class="price-quantity">السعر: 12 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>مقبض ماسورة 128 خفيف<div class="price-quantity">السعر: 10 <br/>(الكمية: 305)</div><div class="total-cost">المجموع: 3050</div></li>
-<li>منشار اركت توتال 400وات<div class="price-quantity">السعر: 1250 <br/>(الكمية: 1)</div><div class="total-cost">المجموع: 1250</div></li>
-<li>منظر طبيعي مطبوع<div class="price-quantity">السعر: 15 <br/>(الكمية: 57)</div><div class="total-cost">المجموع: 855</div></li>
-<li>منظم معالق 30سم<div class="price-quantity">السعر: 110 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>منظم معالق 35سم<div class="price-quantity">السعر: 115 <br/>(الكمية: 9)</div><div class="total-cost">المجموع: 1035</div></li>
-<li>منظم معالق 40سم<div class="price-quantity">السعر: 120 <br/>(الكمية: 9)</div><div class="total-cost">المجموع: 1080</div></li>
-<li>ھواية درج اسود<div class="price-quantity">السعر: 22 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 220</div></li>
-<li>ھواية درج بيج<div class="price-quantity">السعر: 22 <br/>(الكمية: 180)</div><div class="total-cost">المجموع: 3960</div></li>
-<li>ھواية درج رصاصي<div class="price-quantity">السعر: 22 <br/>(الكمية: 10)</div><div class="total-cost">المجموع: 220</div></li>
-<li>ھواية درج كافي<div class="price-quantity">السعر: 22 <br/>(الكمية: 184)</div><div class="total-cost">المجموع: 4048</div></li>
-<li>مسمار بوردة صغير<div class="price-quantity">السعر: 120 <br/>(الكمية: 23.5)</div><div class="total-cost">المجموع: 2820</div></li>
-<li>ثنائى اسود ام اس<div class="price-quantity">السعر: 175 <br/>(الكمية: 1148)</div><div class="total-cost">المجموع: 200900</div></li>
-<li>مسمار 3.5* 20 مم سن صاج<div class="price-quantity">السعر: 115 <br/>(الكمية: 3)</div><div class="total-cost">المجموع: 345</div></li>
-<li>رشة دهان المنيوم فضى<div class="price-quantity">السعر: 22 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>رينو بى اس كبير<div class="price-quantity">السعر: 7 <br/>(الكمية: 170)</div><div class="total-cost">المجموع: 1190</div></li>
-<li>ثلاثي 4*4 دوران اسود<div class="price-quantity">السعر: 6 <br/>(الكمية: 71)</div><div class="total-cost">المجموع: 426</div></li>
-<li>ثلاثي دوران كافي<div class="price-quantity">السعر: 2.5 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-<li>ثلاثي 4*4 دوران كاقي<div class="price-quantity">السعر: 8 <br/>(الكمية: 105)</div><div class="total-cost">المجموع: 840</div></li>
-<li>ثتاثي 4*4 عدل اسود<div class="price-quantity">السعر: 6 <br/>(الكمية: 87)</div><div class="total-cost">المجموع: 522</div></li>
-<li>ثتاثي دوران 4*4 بيج<div class="price-quantity">السعر: 8 <br/>(الكمية: 110)</div><div class="total-cost">المجموع: 880</div></li>
-<li>كورنر سلك جامبو<div class="price-quantity">السعر: 8.5 <br/>(الكمية: 150)</div><div class="total-cost">المجموع: 1275</div></li>
-<li>لفة سلك سرند م<div class="price-quantity">السعر: 70 <br/>(الكمية: 25)</div><div class="total-cost">المجموع: 1750</div></li>
-<li>درج بلاستك بالتقسيمة<div class="price-quantity">السعر: 285 <br/>(الكمية: 0)</div><div class="total-cost">المجموع: 0</div></li>
-
-    </ul> 
-</div>
-<div class="total-summary">مجموع البضاعه <span>0</span></div>
-<script>
-    // اجمع كل القيم في العناصر ذات الصنف "total-cost"
-    let totalCostElements = document.querySelectorAll('.total-cost');
-    let totalSum = 0;
-
-    totalCostElements.forEach(element => {
-        let cost = parseFloat(element.textContent.replace('المجموع:', '').trim());
-        if (!isNaN(cost)) {
-            totalSum += cost;
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
         }
-    });
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        } 
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+            border-radius: 5px;
+            gap: 10px;
+            display: grid;
+            width: 100%;
+        }
+        li {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        li:hover {
+            background-color: #f0f0f0;
+        }
+        .total-cost {
+            font-weight: bold;
+            color: #d9534f;
+        }
+        .price {
+            color: #5bc0de;
+        }
+        .quantity {
+            color: #5cb85c;
+        }
+        .total-summary {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+        }
+        .print-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-    // تحديث النص داخل العنصر <span>
-    let totalSpan = document.querySelector('div > span');
-    if (totalSpan) {
-        totalSpan.textContent = totalSum.toFixed(2); // عرض الرقم بصيغة عشرية
-    }
+        /* Hide print button when printing */
+        @media print {
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>محل الاكسيسوارات</h1>
 
-    console.log('إجمالي المجموع:', totalSum);
-</script>
+    <div class="container">
+        <ul id="list1"></ul>
+        <ul id="list2"></ul>
+    </div>
+
+    <div class="total-summary">مجموع البضاعه <span>0</span></div>
+
+    <!-- Print Button -->
+    <button class="print-btn" onclick="window.print()">🖨️ طباعة</button>
+
+    <script>
+        const storedItems = JSON.parse(localStorage.getItem('Items')) || [];
+
+        const list1 = document.getElementById('list1');
+        const list2 = document.getElementById('list2');
+        let totalSum = 0;
+        let displayIndex = 0;
+
+        storedItems.forEach((item) => {
+            // Skip items with **** in their name
+            if (item.name.includes('****')) return;
+
+            const total = item.price * item.quantity;
+            totalSum += total;
+
+            const li = document.createElement('li');
+            li.innerHTML = `
+                ${item.name}
+                <div class="price-quantity">
+                    السعر: ${item.price} <br/>
+                    (الكمية: ${item.quantity.toFixed(1)})
+                </div>
+                <div class="total-cost">المجموع: ${total.toFixed(1)}</div>
+            `;
+
+            if (displayIndex % 2 === 0) {
+                list1.appendChild(li);
+            } else {
+                list2.appendChild(li);
+            }
+
+            displayIndex++;
+        });
+
+        const totalSpan = document.querySelector('.total-summary span');
+        if (totalSpan) {
+            totalSpan.textContent = totalSum.toFixed(2);
+        }
+    </script>
 </body>
 </html>
